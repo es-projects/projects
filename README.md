@@ -50,10 +50,9 @@ The default database user name and password are `vagrant`
 
 ## User setup
 You can, of course, change the database owner or password. To do so:
-
-    ```bash
-    sudo -u postgres psql -c "create role pg with superuser createdb login password 'pg';"
-    ```
+```bash
+sudo -u postgres psql -c "create role pg with superuser createdb login password 'pg';"
+```
 
 Then change the user name and password in all the appropriate places in `config/database.yml`
 

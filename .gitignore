@@ -134,3 +134,12 @@ Temporary Items
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+# Vagrant stuff
+boxes/*
+.vagrant/
+/website/.vagrant
+/website/build
+/vagrant-spec.config.rb
+test/vagrant-spec/.vagrant/
+*.box

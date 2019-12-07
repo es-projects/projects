@@ -1,12 +1,25 @@
 language: ruby
+os: linux
 dist: bionic
 rvm: "— 2.6.5"
+
+env:
+  global:
+    - PGPORT=5433
+
 addons:
     # uncomment when needed, will save us time
     # chrome: stable
+    postgresql: "10"
+    apt:
+      packages:
+        - postgresql-10
+        - postgresql-client-10
+
     code_climate:
         repo_token:
             secure: "KeKYrK0GYKSXbbCVniFeRXcEEO6DRy/4CEiatJFlSSrG910zAwjxTze74s/iK6w3EVR4tjvBqnP25z0kli0yop6O13jPKE39+JSn6cYjsFYdbdCZPnq2p4bopxF5CI0gxpgiMxDC2Xy8obbhkwWoQjXAXWUgPXrEjfC2KaKc0mE5BGYwW1+WR2tlwH5R+Zq19V6N0xi/YmyG4SvIY0kjdNQXgjEdlg3YzCsPwx2mqE4loc77XWCIjE22jUujQnPbSCDSHWkp9eNBEd4xFMu0i9kH1WxOi7a27ok/Smm7FuAK7aEWZpnjLYG44g7WvFGgOuReTzKGpuju/Ksdz7q4xr10sxITXA/sZHqEwbTXAFjchfhSkEGDvUEdeaLch+la0REwLs8ZDPiQN3G07cK9ZLHa/J8h7TAk+7b7TjoL7b6FHDLf9QmmJsvLTYmyYbgStFl1aJNEbswiOuEiT+yM4CuRHIJlApF17W9p6IPK2qu0pN/2qtseRolegSwjjjfsw946T4SGGpChQ1vxeXvYeTT8N5aQtz/cndiG356yjFwywxot9kxHdHu0kFTXFOllbcFTudRyfMmjnf8mcuXty1zENOJZf6LKFyZOgjqXKepEo4zmvuV7S9VNIUg5Y9+Q4tc7oIjGvZZ7vRyuYQBe0KTn2zsKelFYYEAME8DDNZQ="
+
 services:
 - postgresql
 # uncomment when needed, will save us time

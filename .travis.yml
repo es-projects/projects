@@ -24,6 +24,7 @@ before_install:
   - gem install bundler
 
 before_script:
+  - sudo -u postgres psql -c "create role pg with superuser createdb login password 'pg';"
   - psql -c 'create database travis_ci_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
 

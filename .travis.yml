@@ -3,7 +3,6 @@ os: linux
 dist: bionic
 rvm: "— 2.6.5"
 addons:
-    postgresql: '10.10'
     # uncomment when needed, will save us time
     # chrome: stable
     code_climate:

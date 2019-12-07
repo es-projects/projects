@@ -31,6 +31,7 @@ Vagrant.configure("2") do |config|
   # within the machine from a port on the host machine and only allow access
   # via 127.0.0.1 to disable public access
   # config.vm.network "forwarded_port", guest: 80, host: 8080, host_ip: "127.0.0.1"
+  config.vm.network "forwarded_port", guest: 3035, host: 3035, host_ip: "127.0.0.1" # webpack
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -52,6 +53,7 @@ Vagrant.configure("2") do |config|
   # Example for VirtualBox:
   #
   config.vm.provider "virtualbox" do |vb|
+    vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
     vb.linked_clone = true
     vb.memory = "1024"
     vb.cpus = 1

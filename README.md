@@ -1,5 +1,9 @@
 # Software Engineering Project
-
+[![Build Status](https://travis-ci.org/es-projects/projects.svg?branch=master)](https://travis-ci.org/es-projects/projects)
+[![Maintainability](https://api.codeclimate.com/v1/badges/431aab00e0ca534b27fc/maintainability)](https://codeclimate.com/github/es-projects/projects/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/431aab00e0ca534b27fc/test_coverage)](https://codeclimate.com/github/es-projects/projects/test_coverage)
+[![GitHub issues](https://img.shields.io/github/issues/es-projects/projects)](https://github.com/es-projects/projects/issues/)
+[![GitHub pull requests](https://img.shields.io/github/issues-pr/es-projects/projects)](https://github.com/es-projects/projects/pulls/)
 ## Getting Started
 
 ### Clone the Repo

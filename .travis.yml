@@ -27,7 +27,6 @@ script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
   - bundle exec rake test test/
-  - bundle exec rspec
 
 after_script:
   - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
@@ -37,7 +36,6 @@ notifications:
   slack:
     rooms:
       secure: tC0FMV4JnuSSxmaiuwvqiiBcEeBU0jn3rnZINc1UgjGW6fiGVtY2i2Ht7Zud0v0jrw+TDIkt25O6y6e1irmvvS0B2ryoF7QjUwMjp9Y76gg9TvcQML6JxM/b7TujWNxTxVKxB7wfGyozQteOaS8nbGiOkQL476Q9W3bpA//O1UWRx82qgTHIoCIT05bx+DKP2qlYynsVOJyBDDWCIApQOdkfO79v2NZ6p+82fnjLM77oVckUCt0ZYWe0yry40RjObDBRCjGBx0TMxO/K4x6JcQIs0L+eEJOpc02IpQu4CPH/ZWKBvNmVGw30nTJSBZRCcdatOOEy2SiT1lXrRpkQ8Kb1xRuz2h/vM0pd1dtsRbIIDUCQ329dkjrkcNBcwrkKrHvBRgybLJYAPg9N6LjjQPV5TlCPVhOa5HiJ6bq6eClEasWvFhQQM057wkB7cyqd6zPzENRvHup1sdlq+ZXxAc69cqsizfxvVxQC20Znoe+Bs2Gqsu/jNbuDW3JYvqaYdc8OX6l95vIBoLg+rJ4OOfUYnTcXh6160uY7V77wwzOKibzvTsrjaeaMay+KCGn57m4rjY3UlbhjzLw8IlDl9o4Z2KLxAUKCjtEwAtB2hAdbbxsvpppmqR8Sj9A9FRMdzLkCpHwiSX3D7wf9Y3iU8tHr39FIeeytfQpx3ODZSnc=
-    on_success: change # default: always
 
 env:
   global:

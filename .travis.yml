@@ -4,14 +4,6 @@ dist: bionic
 rvm: "— 2.6.5"
 
 addons:
-    # uncomment when needed, will save us time
-    # chrome: stable
-    #postgresql: "10"
-    #apt:
-    #  packages:
-    #    - postgresql-10
-    #    - postgresql-client-10
-
     code_climate:
         repo_token:
             secure: "KeKYrK0GYKSXbbCVniFeRXcEEO6DRy/4CEiatJFlSSrG910zAwjxTze74s/iK6w3EVR4tjvBqnP25z0kli0yop6O13jPKE39+JSn6cYjsFYdbdCZPnq2p4bopxF5CI0gxpgiMxDC2Xy8obbhkwWoQjXAXWUgPXrEjfC2KaKc0mE5BGYwW1+WR2tlwH5R+Zq19V6N0xi/YmyG4SvIY0kjdNQXgjEdlg3YzCsPwx2mqE4loc77XWCIjE22jUujQnPbSCDSHWkp9eNBEd4xFMu0i9kH1WxOi7a27ok/Smm7FuAK7aEWZpnjLYG44g7WvFGgOuReTzKGpuju/Ksdz7q4xr10sxITXA/sZHqEwbTXAFjchfhSkEGDvUEdeaLch+la0REwLs8ZDPiQN3G07cK9ZLHa/J8h7TAk+7b7TjoL7b6FHDLf9QmmJsvLTYmyYbgStFl1aJNEbswiOuEiT+yM4CuRHIJlApF17W9p6IPK2qu0pN/2qtseRolegSwjjjfsw946T4SGGpChQ1vxeXvYeTT8N5aQtz/cndiG356yjFwywxot9kxHdHu0kFTXFOllbcFTudRyfMmjnf8mcuXty1zENOJZf6LKFyZOgjqXKepEo4zmvuV7S9VNIUg5Y9+Q4tc7oIjGvZZ7vRyuYQBe0KTn2zsKelFYYEAME8DDNZQ="
@@ -27,6 +19,18 @@ before_script:
   - sudo -u postgres psql -c "create role pg with superuser createdb login password 'pg';"
   - psql -c 'create database travis_ci_test;' -U postgres
   - cp config/database.yml.travis config/database.yml
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake db:test:prepare
+  - bundle exec rake test test/
+  - bundle exec rspec
+
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
 
 notifications:
   email: false
@@ -38,3 +42,4 @@ notifications:
 env:
   global:
     secure: eJtjCStS+HmQzEZw+/xoQOPBXnNI9YKp3XhBQ9pmlztoE22nrGbJJoLt6kcpu9LQHSAG8rqduWIKuRKfZmqPtNmIbFSB2f+5Ie4lVC9TGNWQV4nIzV/RqTMUiDASEYB8KDIfiA97jDYLpMDegj7fqMWqQz7oH1NXcbQdjq2UkcwprUBNvMC2fxHAEaOQtPcSjJS6rKNCVn/FiSQr6+pE6G2rcGFywnP/sToPTg8SSkIdGLCWk5y3UHkTe2s83nEWw9ujj8Kv0p6cexlJVMzMd8O0+C2OANFZaS+kqmTXLBpvzpDjurvwRkW+9j7wiJRf47NG84ZvE4XB1xfF5qYaA4ZqsFU6TcHAotEOCMzwOCHNN1Gpe0pgYyd1xPhVFPWf+CauAkiBlAFfCdiMn7PdOv0KYBLbFSPR7hsBuWxlP2bdzqsuHKQJUoCgsR9tuHLxPVPrybCeKTkN3pony2rYp7ymxvbPJQF2ugmDLcLJ/uwyNjsBNUDUmhNGUycwhBT0XRUoc6cqRcVZAnELdTHw33bKRn5qf+O3GXqe/koMBI0SSIBGnXR8UJMlE5Ce8mYjRLT7c+UWIgPJnwKmv/WMxTF1LYnu0iiqJcX90kPT05xe+3xhTUDFOsnXMfdndg72RuDtmeAV4La7bT2/7+HHJUU9nFJBtWQpeuQ8Xxw3ZXM=
+    - CC_TEST_REPORTER_ID=7b4c5052a238c34c1ceaab60c4c2a9236e5ccf279e8ecbb322af7673614cccbd

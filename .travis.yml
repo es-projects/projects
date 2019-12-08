@@ -1,4 +1,5 @@
 language: ruby
+cache: bundler
 os: linux
 dist: bionic
 rvm: "— 2.6.5"

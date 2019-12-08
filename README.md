@@ -6,6 +6,12 @@
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/es-projects/projects)](https://github.com/es-projects/projects/pulls/)
 ## Getting Started
 
+### Starting a new Rails Project
+You don't need to do this step (reference only), the project is already created
+```bash
+rails new . --database=postgresql --skip-coffee
+```
+
 ### Clone the Repo
 ```bash
 git clone https://github.com/es-projects/projects.git
@@ -15,6 +21,7 @@ git clone https://github.com/es-projects/projects.git
 Start the virtual machine and ssh into it:
 ```bash
 vagrant up && vagrant ssh
+bundle install
 ```
 
 ### Starting the Rails Server
@@ -30,6 +37,19 @@ If you mess up something just destroy the machine and then start it again
 vagrant halt
 vagrant destroy
 vagrant up
+```
+
+### Bugs
+If the symlink creation fails on Windows you have to run vagrant with administrator privileges.
+First stop the vm
+```bash 
+vagrant halt
+```
+Then run CMD or git bash or whatever you use to run vagrant with administrator privileges (Right-Click -> Run as administrator)
+```bash
+vagrant up
+vagrant ssh
+yarn install --check-files
 ```
 
 ## Vagrant File

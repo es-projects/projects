@@ -23,9 +23,11 @@ before_script:
   - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
   - chmod +x ./cc-test-reporter
   - ./cc-test-reporter before-build
+  - yarn install
 
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
+  - bundle exec rake webpacker:compile RAILS_ENV=test
   - bundle exec rake db:test:prepare
   - bundle exec rake test test/
 
@@ -41,4 +43,3 @@ notifications:
 env:
   global:
     secure: eJtjCStS+HmQzEZw+/xoQOPBXnNI9YKp3XhBQ9pmlztoE22nrGbJJoLt6kcpu9LQHSAG8rqduWIKuRKfZmqPtNmIbFSB2f+5Ie4lVC9TGNWQV4nIzV/RqTMUiDASEYB8KDIfiA97jDYLpMDegj7fqMWqQz7oH1NXcbQdjq2UkcwprUBNvMC2fxHAEaOQtPcSjJS6rKNCVn/FiSQr6+pE6G2rcGFywnP/sToPTg8SSkIdGLCWk5y3UHkTe2s83nEWw9ujj8Kv0p6cexlJVMzMd8O0+C2OANFZaS+kqmTXLBpvzpDjurvwRkW+9j7wiJRf47NG84ZvE4XB1xfF5qYaA4ZqsFU6TcHAotEOCMzwOCHNN1Gpe0pgYyd1xPhVFPWf+CauAkiBlAFfCdiMn7PdOv0KYBLbFSPR7hsBuWxlP2bdzqsuHKQJUoCgsR9tuHLxPVPrybCeKTkN3pony2rYp7ymxvbPJQF2ugmDLcLJ/uwyNjsBNUDUmhNGUycwhBT0XRUoc6cqRcVZAnELdTHw33bKRn5qf+O3GXqe/koMBI0SSIBGnXR8UJMlE5Ce8mYjRLT7c+UWIgPJnwKmv/WMxTF1LYnu0iiqJcX90kPT05xe+3xhTUDFOsnXMfdndg72RuDtmeAV4La7bT2/7+HHJUU9nFJBtWQpeuQ8Xxw3ZXM=
-

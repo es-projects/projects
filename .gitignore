@@ -126,14 +126,16 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-# Ignore master key for decrypting credentials and more.
-/config/master.key
+# Tests
 /public/packs
 /public/packs-test
+
+# Yarn
 /node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+/packages/lockfile/index.js
 
 # Vagrant stuff
 boxes/*
@@ -144,12 +146,10 @@ boxes/*
 test/vagrant-spec/.vagrant/
 *.box
 
-# Ignore master key for decrypting credentials and more.
-/config/master.key
-
-/public/packs
-/public/packs-test
-/node_modules
-/yarn-error.log
-yarn-debug.log*
-.yarn-integrity
+# IDE
+.vs
+.idea
+.yarn-meta
+.pnp.js
+.pnp
+.vscode/

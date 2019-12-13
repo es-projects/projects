@@ -32,7 +32,7 @@ You can now access it on `localhost:3000`
 
 ### Database 
 Delete all databases
-```
+```bash
 rails db:drop
 ```
 Create databases
@@ -83,13 +83,13 @@ yarn install --check-files
 The vagrant file uses the [jadesystems/rails-5-2](https://app.vagrantup.com/jadesystems/boxes/rails-5-2) base box with a script to update some apps
 
 ### Versions
-* npm 6.12.1
-* Ruby 2.6.5
-* Yarn 1.19.2
-* PSQL 10.10
-* Rails 6.0.1
-* Redis 4.0.9
-* NodeJS 12.13.1
+*   npm 6.12.1
+*   Ruby 2.6.5
+*   Yarn 1.19.2
+*   PSQL 10.10
+*   Rails 6.0.1
+*   Redis 4.0.9
+*   NodeJS 12.13.1
 
 ## Configuration
 * `config/database.yml` - PostgreSQL DB config file
@@ -109,13 +109,13 @@ Then change the user name and password in all the appropriate places in `config/
 
 ## Dependencies
 This probably will not be updated, just check the `Gemfile`
-* Ruby (2.6.5)
-* Rails (~>6.0.1)
-* Pg (>= 0.18)
-* Puma (~> 4.1)
-* Sass-rails (>= 6)
-* Webpacker (~> 4.0)
-* Turbolinks (~> 5)
-* Jbuilder (~> 2.7)
-* Faker
-* Bootsnap (>= 1.4.2)
+*   Ruby (2.6.5)
+*   Rails (~>6.0.1)
+*   Pg (>= 0.18)
+*   Puma (~> 4.1)
+*   Sass-rails (>= 6)
+*   Webpacker (~> 4.0)
+*   Turbolinks (~> 5)
+*   Jbuilder (~> 2.7)
+*   Faker
+*   Bootsnap (>= 1.4.2)

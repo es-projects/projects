@@ -21,7 +21,6 @@ git clone https://github.com/es-projects/projects.git
 Start the virtual machine and ssh into it:
 ```bash
 vagrant up && vagrant ssh
-bundle install
 ```
 
 ### Starting the Rails Server
@@ -30,6 +29,34 @@ cd /vagrant
 rails server --binding 0.0.0.0
 ```
 You can now access it on `localhost:3000`
+
+### Database 
+Delete all databases
+```
+rails db:drop
+```
+Create databases
+```bash
+rails db:create
+```
+Run migrations 
+```bash
+rails db:migrate
+```
+Seed
+```bash
+rails db:seed
+```
+
+### Tests
+Running tests
+```bash
+RAILS_ENV=test rails rails test
+```
+Running system tests
+```bash
+RAILS_ENV=test rails test:system
+```
 
 ### Destroy the VM
 If you mess up something just destroy the machine and then start it again
@@ -80,8 +107,15 @@ sudo -u postgres psql -c "create role pg with superuser createdb login password 
 
 Then change the user name and password in all the appropriate places in `config/database.yml`
 
-## Ruby Dependencies
+## Dependencies
 This probably will not be updated, just check the `Gemfile`
-* Rails
-
-## Test Suite
+* Ruby (2.6.5)
+* Rails (~>6.0.1)
+* Pg (>= 0.18)
+* Puma (~> 4.1)
+* Sass-rails (>= 6)
+* Webpacker (~> 4.0)
+* Turbolinks (~> 5)
+* Jbuilder (~> 2.7)
+* Faker
+* Bootsnap (>= 1.4.2)

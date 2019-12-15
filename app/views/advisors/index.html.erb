@@ -1,0 +1,27 @@
+<h1>Advisors</h1>
+
+<table>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Intern</th>
+      <th colspan="3"></th>
+    </tr>
+
+    <% @advisors.each do |advisor| %>
+      <tr>
+        <td><%= advisor.id %></td>
+        <td><%= advisor.name %></td>
+        <td><%= advisor.email %></td>
+        <td><%= advisor.intern %></td>
+        <td><%= link_to 'Show', advisor_path(advisor) %></td>
+        <td><%= link_to 'Edit', edit_advisor_path(advisor) %></td>
+        <td><%= link_to 'Destroy', advisor_path(advisor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+</table>
+
+<br>
+
+<%= link_to 'New Advisor', new_advisor_path %>

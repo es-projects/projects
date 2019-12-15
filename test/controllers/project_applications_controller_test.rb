@@ -17,7 +17,7 @@ class ProjectApplicationsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create project_application" do
     assert_difference('ProjectApplication.count') do
-      post project_applications_url, params: { project_application: { accepted: @project_application.accepted, group_id: @project_application.group_id, project_id: @project_application.project_id } }
+      post project_applications_url, params: { project_application: { accepted: false, group_id: 1, project_id: 5 } }
     end
 
     assert_redirected_to project_application_url(ProjectApplication.last)

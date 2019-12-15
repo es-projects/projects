@@ -6,6 +6,16 @@ one:
   accepted: false
 
 two:
-  group_id: 1
-  project_id: 1
+  group_id: a
+  project_id: 2
   accepted: false
+
+three:
+  group_id: 1
+  project_id: -3
+  accepted: true
+
+four:
+  group_id: 2
+  project_id: 1
+  accepted: ""

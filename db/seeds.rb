@@ -9,6 +9,17 @@ require 'faker'
 Student.create([{ number: 20165, name:'David Moreno', ects:150, average:12.96, group_id: 0 , project_id: 0 },
                            { number: 20167, name:'Diogo Ribeiro', ects:150, average:13.84, group_id: 0 , project_id: 0 }])
 
+10.times do
+    Student.create(
+        number: rand(1..30000),
+        name: Faker::TvShows::SouthPark.character,
+        ects: rand(1..180),
+        average: rand(1..20),
+        group_id: 0,
+        project_id: 0
+    )
+end
+
 15.times do
     Advisor.create(
         name: Faker::TvShows::Simpsons.character,

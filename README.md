@@ -51,7 +51,7 @@ rails db:seed
 ### Tests
 Running tests
 ```bash
-RAILS_ENV=test rails test
+RAILS_ENV=test rails rails test
 ```
 Running system tests
 ```bash

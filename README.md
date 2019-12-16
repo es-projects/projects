@@ -2,6 +2,8 @@
 [![Build Status](https://travis-ci.org/es-projects/projects.svg?branch=master)](https://travis-ci.org/es-projects/projects)
 [![Maintainability](https://api.codeclimate.com/v1/badges/431aab00e0ca534b27fc/maintainability)](https://codeclimate.com/github/es-projects/projects/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/431aab00e0ca534b27fc/test_coverage)](https://codeclimate.com/github/es-projects/projects/test_coverage)
+![Codacy Grade](https://img.shields.io/codacy/grade/17843b8c5e85419d858ae25ab9a75294)
+![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/es-projects/projects)
 [![GitHub issues](https://img.shields.io/github/issues/es-projects/projects)](https://github.com/es-projects/projects/issues/)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/es-projects/projects)](https://github.com/es-projects/projects/pulls/)
 ## Getting Started
@@ -92,7 +94,7 @@ The vagrant file uses the [jadesystems/rails-5-2](https://app.vagrantup.com/jade
 *   NodeJS 12.13.1
 
 ## Configuration
-* `config/database.yml` - PostgreSQL DB config file
+*   `config/database.yml` - PostgreSQL DB config file
 
 ## Database
 The script will create the `vagrant_development`, `vagrant_test` and `vagrant_production` databases and setup the PSQL environment automatically.

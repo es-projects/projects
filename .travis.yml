@@ -15,8 +15,6 @@ before_install:
   - sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt/ bionic-pgdg main" >> /etc/apt/sources.list.d/postgresql.list'
   - sudo -E apt-get -yq --no-install-suggests --no-install-recommends install postgresql-10
   - gem update --system
-  # https://stackoverflow.com/a/36272531
-  - gem install --force bundler
 
 before_script:
   - psql -c 'create database travis_ci_test;' -U postgres

@@ -3,7 +3,6 @@
 [![Maintainability](https://api.codeclimate.com/v1/badges/431aab00e0ca534b27fc/maintainability)](https://codeclimate.com/github/es-projects/projects/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/431aab00e0ca534b27fc/test_coverage)](https://codeclimate.com/github/es-projects/projects/test_coverage)
 ![Codacy Grade](https://img.shields.io/codacy/grade/17843b8c5e85419d858ae25ab9a75294)
-![Snyk Vulnerabilities for GitHub Repo](https://img.shields.io/snyk/vulnerabilities/github/es-projects/projects)
 [![GitHub issues](https://img.shields.io/github/issues/es-projects/projects)](https://github.com/es-projects/projects/issues/)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/es-projects/projects)](https://github.com/es-projects/projects/pulls/)
 ## Getting Started

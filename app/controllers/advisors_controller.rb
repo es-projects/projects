@@ -53,6 +53,6 @@ class AdvisorsController < ApplicationController
   private
     # Never trust parameters from the scary internet
     def advisor_params
-      params.require(:advisor).permit(:name, :email, :intern)
+      params.require(:advisor).permit(:name, :email, :intern, :user_id)
     end
 end

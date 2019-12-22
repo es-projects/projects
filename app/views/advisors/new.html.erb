@@ -31,6 +31,11 @@
     </p>
 
     <p>
+      <%= form.label :user_id %><br />
+      <%= form.select :user_id, options_for_select(User.all.map{|s|[s.username, s.id]}) %>
+    <p>
+
+    <p>
         <%= form.submit %>
     </p>
 

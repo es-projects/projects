@@ -6,17 +6,18 @@ require 'faker'
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-users = []
+
 30.times do |n|
-    users[n] = User.create(
+    User.create(
         username: Faker::Internet.user_name,
         email: Faker::Internet.email,
         password:  BCrypt::Password.create('asd_123')        
     )
+end
 
 Student.create([
-    { number: 20165, name:'David Moreno', ects:150, average:12.96, group_id: 0 , project_id: 0, user_id: users[1] },
-    { number: 20167, name:'Diogo Ribeiro', ects:150, average:13.84, group_id: 0 , project_id: 0, user_id: users[2] }])
+    { number: 20165, name:'David Moreno', ects:150, average:12.96, group_id: 0 , project_id: 0, user_id: 1 },
+    { number: 20167, name:'Diogo Ribeiro', ects:150, average:13.84, group_id: 0 , project_id: 0, user_id: 2 }])
 
 10.times do |n|
     Student.create(
@@ -26,7 +27,7 @@ Student.create([
         average: rand(1..20),
         group_id: 0,
         project_id: 0,
-        user_id: users[n+2]
+        user_id: n+3
     )
 end
 
@@ -34,8 +35,8 @@ end
     Advisor.create(
         name: Faker::TvShows::Simpsons.character,
         email: Faker::Internet.email,
-        intern: Faker::Boolean.boolean(true_ratio: 0.4,
-        user_id: users[n+12] )
+        intern: Faker::Boolean.boolean(true_ratio: 0.4),
+        user_id: n+14   
     )
 end
 

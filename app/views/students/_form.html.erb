@@ -41,6 +41,11 @@
     <%= form.number_field :project_id %>
   </div>
 
+  <div class="field">
+  <%= form.label :user_id %><br />
+  <%= form.select :user_id, options_for_select(User.all.map{|s|[s.username, s.id]}) %>
+</div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

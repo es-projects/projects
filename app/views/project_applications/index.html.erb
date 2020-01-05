@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Project Applications</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Group</th>
+      <th>Project</th>
+      <th>Accepted</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @project_applications.each do |project_application| %>
+      <tr>
+        <td><%= project_application.group_id %></td>
+        <td><%= project_application.project_id %></td>
+        <td><%= project_application.accepted %></td>
+        <td><%= link_to 'Show', project_application %></td>
+        <td><%= link_to 'Edit', edit_project_application_path(project_application) %></td>
+        <td><%= link_to 'Destroy', project_application, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Project Application', new_project_application_path %>

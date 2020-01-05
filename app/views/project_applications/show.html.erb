@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Group:</strong>
+  <%= @project_application.group_id %>
+</p>
+
+<p>
+  <strong>Project:</strong>
+  <%= @project_application.project_id %>
+</p>
+
+<p>
+  <strong>Accepted:</strong>
+  <%= @project_application.accepted %>
+</p>
+
+<%= link_to 'Edit', edit_project_application_path(@project_application) %> |
+<%= link_to 'Back', project_applications_path %>

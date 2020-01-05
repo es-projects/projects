@@ -1,0 +1,89 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  number: 1
+  name: MyString
+  ects: 1
+  average: 1.5
+  group_id: 1
+  project_id: 1
+  user: user_one
+
+two:
+  number: 1
+  name: MyString
+  ects: 1
+  average: 1.5
+  group_id: 1
+  project_id: 1
+  user: user_one
+
+# All valid
+three:
+  number: 23456
+  name: StringerBoy
+  ects: 150
+  average: 15.05
+  group_id: 1
+  project_id: 1
+  user: user_one
+
+# All valid except number -> number = string -> ERROR
+four:
+  number: SouUmNumero
+  name: StringerBoy
+  ects: 150
+  average: 15.05
+  group_id: 1
+  project_id: 1
+  user: user_one
+
+# All valid except number -> number < 0 -> error
+five:
+  number: -23456
+  name: StringerBoy
+  ects: 150
+  average: 15.05
+  group_id: 1
+  project_id: 1
+  user: user_one
+
+# All valid except group_id -> group_id <0 -> error
+six:
+  number: 23456
+  name: StringerBoy
+  ects: 150
+  average: 15.05
+  group_id: -1
+  project_id: 1
+  user: user_one
+
+# All valid except project_id -> project_id <0 -> error
+seven:
+  number: 23456
+  name: StringerBoy
+  ects: 150
+  average: 15.05
+  group_id: 1
+  project_id: -1
+  user: user_one
+
+# All valid except ects -> ects > 180 -> error
+eight:
+  number: 23456
+  name: StringerBoy
+  ects: 1500
+  average: 15.05
+  group_id: 1
+  project_id: 1
+  user: user_one
+
+# All valid except average -> average >20 -> error
+nine:
+  number: 23456
+  name: StringerBoy
+  ects: 150
+  average: 150.05
+  group_id: 1
+  project_id: 1
+  user: user_one

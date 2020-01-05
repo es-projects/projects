@@ -54,6 +54,14 @@ ActiveRecord::Schema.define(version: 2019_12_22_172437) do
     t.string "password_digest"
   end
 
+  create_table "projects", force: :cascade do |t|
+    t.string "project_name"
+    t.text "project_description"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   add_foreign_key "advisors", "users", on_delete: :cascade
   add_foreign_key "students", "users", on_delete: :cascade
+
 end

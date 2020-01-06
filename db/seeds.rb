@@ -11,7 +11,8 @@ require 'faker'
     User.create(
         username: Faker::Internet.user_name,
         email: Faker::Internet.email,
-        password:  BCrypt::Password.create('asd_123')        
+        password:  "password",
+        password_confirmation: "password"
     )
 end
 
@@ -36,7 +37,7 @@ end
         name: Faker::TvShows::Simpsons.character,
         email: Faker::Internet.email,
         intern: Faker::Boolean.boolean(true_ratio: 0.4),
-        user_id: n+14   
+        user_id: n+14
     )
 end
 

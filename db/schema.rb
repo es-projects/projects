@@ -78,8 +78,8 @@ ActiveRecord::Schema.define(version: 2020_01_11_170320) do
   add_foreign_key "advisors", "users", on_delete: :cascade
   add_foreign_key "advisors_projects", "advisors", on_delete: :cascade
   add_foreign_key "advisors_projects", "projects", on_delete: :cascade
-  add_foreign_key "groups", "students", column: "student_1_id"
-  add_foreign_key "groups", "students", column: "student_2_id"
+  add_foreign_key "groups", "students", column: "student_1_id", on_delete: :cascade
+  add_foreign_key "groups", "students", column: "student_2_id", on_delete: :cascade
   add_foreign_key "project_applications", "groups", on_delete: :cascade
   add_foreign_key "project_applications", "projects", on_delete: :cascade
   add_foreign_key "students", "users", on_delete: :cascade

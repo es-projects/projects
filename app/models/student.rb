@@ -6,6 +6,6 @@ class Student < ApplicationRecord
     validates :average, numericality: {:greater_than_or_equal_to => 0, :less_than_or_equal_to => 20}
     
     belongs_to :user
-    belongs_to :group
+    has_one :group
 
 end

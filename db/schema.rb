@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_11_140056) do
+ActiveRecord::Schema.define(version: 2020_01_11_161936) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,5 +71,6 @@ ActiveRecord::Schema.define(version: 2020_01_11_140056) do
   add_foreign_key "advisors", "users", on_delete: :cascade
   add_foreign_key "advisors_projects", "advisors", on_delete: :cascade
   add_foreign_key "advisors_projects", "projects", on_delete: :cascade
+  add_foreign_key "project_applications", "projects", on_delete: :cascade
   add_foreign_key "students", "users", on_delete: :cascade
 end

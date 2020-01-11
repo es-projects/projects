@@ -4,4 +4,5 @@ class ProjectApplication < ApplicationRecord
 	validates :accepted, inclusion: { in: [true, false]}
 
 	belongs_to :project
+	belongs_to :group
 end

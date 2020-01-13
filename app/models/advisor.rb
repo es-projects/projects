@@ -12,4 +12,5 @@ class Advisor < ApplicationRecord
   validates :intern, inclusion: { in: [true, false] }
 
   belongs_to :user
+  has_and_belongs_to_many :projects
 end

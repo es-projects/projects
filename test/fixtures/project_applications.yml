@@ -1,9 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  group_id: 1
-  project_id: 1
   accepted: false
+  group: group_one
+  project: one
 
 two:
   group_id: a

@@ -11,7 +11,8 @@ require 'faker'
     User.create(
         username: Faker::Internet.user_name,
         email: Faker::Internet.email,
-        password:  BCrypt::Password.create('asd_123')        
+        password:  "password",
+        password_confirmation: "password"
     )
 end
 
@@ -32,13 +33,27 @@ Student.create([
 end
 
 15.times do |n|
+    Project.create([
+        project_name: Faker::Food.dish,
+        project_description: Faker::Food.description
+    ])
+end
+
+15.times do |n|
     Advisor.create(
         name: Faker::TvShows::Simpsons.character,
         email: Faker::Internet.email,
         intern: Faker::Boolean.boolean(true_ratio: 0.4),
-        user_id: n+14   
+        user_id: n+14
     )
 end
+
+Group.create([
+    {student_1_id: 1, student_2_id: 2},
+    {student_1_id: 3, student_2_id: 5},
+    {student_1_id: 7, student_2_id: 8},
+    {student_1_id: 4, student_2_id: 6},
+])
 
 ProjectApplication.create([
 	{ group_id: '1', project_id: '1', accepted: 'false' },
@@ -55,7 +70,6 @@ ProjectApplication.create([
 15.times do |n|
     Project.create(
         project_name: Faker::App.name,
-        project_description: Faker::Lorem.paragraph,
-         
+        project_description: Faker::Lorem.paragraph      
     )
 end

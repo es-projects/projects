@@ -51,3 +51,11 @@ ProjectApplication.create([
 	{ group_id: '3', project_id: '1', accepted: 'false' },
 	{ group_id: '3', project_id: '2', accepted: 'false' }
 ])
+
+15.times do |n|
+    Project.create(
+        project_name: Faker::App.name,
+        project_description: Faker::Quote.Ribeiro,
+         
+    )
+end

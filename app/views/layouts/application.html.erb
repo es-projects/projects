@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vagrant</title>
+    <title><%= content_for?(:title) ? yield(:title) : "Final Projects" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    
+    <%= stylesheet_link_tag "application", media: "all" %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<%= render partial: 'partials/navbar' %>
+
   <body>
     <%= yield %>
+
+    <%= render partial: 'partials/footer' %>
   </body>
 </html>

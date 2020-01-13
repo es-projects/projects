@@ -33,6 +33,13 @@ Student.create([
 end
 
 15.times do |n|
+    Project.create([
+        project_name: Faker::Food.dish,
+        project_description: Faker::Food.description
+    ])
+end
+
+15.times do |n|
     Advisor.create(
         name: Faker::TvShows::Simpsons.character,
         email: Faker::Internet.email,
@@ -40,6 +47,13 @@ end
         user_id: n+14
     )
 end
+
+Group.create([
+    {student_1_id: 1, student_2_id: 2},
+    {student_1_id: 3, student_2_id: 5},
+    {student_1_id: 7, student_2_id: 8},
+    {student_1_id: 4, student_2_id: 6},
+])
 
 ProjectApplication.create([
 	{ group_id: '1', project_id: '1', accepted: 'false' },

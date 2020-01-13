@@ -55,7 +55,7 @@ ProjectApplication.create([
 15.times do |n|
     Project.create(
         project_name: Faker::App.name,
-        project_description: Faker::Quote.Ribeiro,
+        project_description: Faker::Lorem.paragraph,
          
     )
 end

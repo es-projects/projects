@@ -12,21 +12,21 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :group_id %>
+    <%= form.label t(:group) %>
     <%= form.number_field :group_id %>
   </div>
 
   <div class="field">
-    <%= form.label :project_id %>
+    <%= form.label t(:project) %>
     <%= form.number_field :project_id %>
   </div>
 
   <div class="field">
-    <%= form.label :accepted %>
+    <%= form.label t(:accepted) %>
     <%= form.check_box :accepted %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit (form.object.new_record? ? t(:create_project_application) : t(:update_project_application)) %>
   </div>
 <% end %>

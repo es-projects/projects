@@ -29,34 +29,34 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  projects: Projects
-  new_project: New Project
-  show: Show
-  edit: Edit
-  destroy: Destroy
-  project_name: Project name
-  proj_desc: Project description
+pt:
+  hello: "Olá mundo"
+  projects: Projetos
+  new_project: Novo Projeto
+  show: Visualizar
+  edit: Editar
+  destroy: Eliminar
+  project_name: Nome do projeto
+  proj_desc: Descrição do projeto
 
-  project_applications: Project Applications
-  group: Group
-  project: Project
-  accepted: Accepted
-  new_project_application: New Project Application
-  edit_project_application: Editing Project Application
-  create_project_application: Create Project Application
-  update_project_application: Update Project Application
+  project_applications: Aplicações a projetos
+  group: Grupo
+  project: Projeto
+  accepted: Aceite
+  new_project_application: Nova Aplicação a Projeto
+  edit_project_application: Editar Aplicação a Projeto
+  create_project_application: Criar Aplicação a Projeto
+  update_project_application: Atualizar Aplicação a Projeto
 
-  groups: Groups
-  group_id: Group Id
-  student_1: Student 1
-  student_2: Student 2
-  new_group: New Group
-  edit_group: Editing Group
-  create_group: Create Group
-  update_group: Update Group
+  groups: Grupos
+  group_id: Id do grupo
+  student_1: Aluno 1
+  student_2: Aluno 2
+  new_group: Novo Grupo
+  edit_group: Editar Grupo
+  create_group: Criar Grupo
+  update_group: Atualizar Grupo
 
-  back: Back
-  confirmation: Are you sure?
-  es: Software Engineering
+  back: Voltar
+  confirmation: Tem a certeza?
+  es: Engenharia de Software

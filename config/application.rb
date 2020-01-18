@@ -11,7 +11,7 @@ module Vagrant
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 6.0
 
-    I18n.available_locales = [:en, :tr]
+    I18n.available_locales = [:en, :pt, :tr]
  
 	# Set default locale to something other than :en
 	I18n.default_locale = :en

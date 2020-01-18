@@ -29,14 +29,13 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
-en:
-  hello: "Hello world"
-  projects: Projects
-  new_project: New Project
-  show: Show
-  edit: Edit
-  destroy: Destroy
-  project_name: Project name
-  proj_desc: Project description
-
-  es: Software Engineering
+tr:
+  hello: "Merhaba"
+  es: Yazılım Mühendisliği
+  projects: Projeler
+  new_project: Yeni Proje
+  show: Göster
+  edit: Düzenle
+  destroy: Sil
+  project_name: Proje Adı
+  proj_desc: Proje içeriği

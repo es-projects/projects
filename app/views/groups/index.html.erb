@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Groups</h1>
+<h1><%= t(:groups) %></h1>
 
 <table>
   <thead>
     <tr>
-      <th>Group id</th>
-      <th>Student 1</th>
-      <th>Student 2</th>
+      <th><%= t(:group_id) %></th>
+      <th><%= t(:student_1) %></th>
+      <th><%= t(:student_2) %></th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -18,9 +18,9 @@
         <td><%= group.id %></td>
         <td><%= group.student_1.name unless group.student_1.nil? %></td>
         <td><%= group.student_2.name unless group.student_2.nil? %></td>
-        <td><%= link_to 'Show', group %></td>
-        <td><%= link_to 'Edit', edit_group_path(group) %></td>
-        <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to t(:show), group %></td>
+        <td><%= link_to t(:edit), edit_group_path(group) %></td>
+        <td><%= link_to t(:destroy), group, method: :delete, data: { confirm: t(:confirmation) } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Group', new_group_path %>
+<%= link_to t(:new_group), new_group_path %>

@@ -1,7 +1,8 @@
 class HomeController < ApplicationController
   def index
-    @groups = Group.count
-    @users = User.count
-    @projects = Project.count
+    @groupsCount = Group.count
+    @usersCount = User.count
+    @projectsCount = Project.count
+    @projects = Project.limit(3)
   end
 end

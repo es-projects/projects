@@ -1,4 +1,12 @@
 
 
-<%= @groups %>
-<%= @users %>
+<%= @groupsCount %>
+<%= @usersCount %>
+<%= @projectsCount %>
+
+<% @projects.each do |project| %>
+  <tr>
+    <td><%= project.project_name %></td>
+    <td><%= project.project_description %></td>
+  </tr>
+<% end %>

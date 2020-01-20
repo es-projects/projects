@@ -1,0 +1,45 @@
+<!-- Navbar with profile  -->
+    <nav class="navbar navbar-absolute navbar-expand-lg bg-white">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="#pablo">PF</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#example-navbar-profile" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-bar bar1"></span>
+                    <span class="navbar-toggler-bar bar2"></span>
+                    <span class="navbar-toggler-bar bar3"></span>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse show" id="example-navbar-profile" data-nav-image="./assets/img//blurred-image-1.jpg">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#pablo">
+                            <i class="now-ui-icons objects_globe"></i>
+                            <p>Discover</p>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pablo">
+                            <i class="now-ui-icons users_circle-08"></i>
+                            <p>Profile</p>
+                        </a>
+                    </li>
+  <li class="nav-item dropdown nav-item-image">
+    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">
+      <div class="">
+        <%= image_tag('/images/avatar.jpg') %>
+        <!--img src="assets/img/avatar.jpg" alt="" class="hoverZoomLink"-->
+      </div>
+    </a>
+    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+      <a class="dropdown-item" href="#">Perfil</a>
+      <a class="dropdown-item" href="#">Definições</a>
+      <div class="divider"></div>
+      <a class="dropdown-item" href="#">Terminar Sessão</a>
+    </div>
+  </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Navbar with profile -->

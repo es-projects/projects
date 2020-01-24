@@ -11,7 +11,7 @@
       <div class="card">
         <div class="info text-center">
           <div class="icon">
-            <i class="now-ui-icons ui-1_email-85"></i>
+            <i class="fas fa-briefcase fa-3x"></i>
           </div>
           <h4 class="info-title">Projects</h4>
           <p class="description"><%= @projectsCount %></p>
@@ -23,7 +23,7 @@
       <div class="card">
         <div class="info text-center">
           <div class="icon">
-            <i class="now-ui-icons ui-1_calendar-60"></i>
+            <i class="fas fa-user fa-3x"></i>
           </div>
           <h4 class="info-title">Users</h4>
           <p class="description"><%= @usersCount %></p>
@@ -35,7 +35,7 @@
       <div class="card">
         <div class="info text-center">
           <div class="icon">
-            <i class="now-ui-icons ui-1_send"></i>
+            <i class="fas fa-user-friends fa-3x"></i>
           </div>
           <h4 class="info-title">Groups</h4>
           <p class="description"><%= @groupsCount %></p>
@@ -43,9 +43,13 @@
       </div>
     </div>
 </div>
-</div>
 
 <div class="container" style="margin-top:20px">
+  <div class="row">
+    <div class="col-md-8 ml-auto mr-auto text-center">
+      <h2 class="title">Projects</h2>
+    </div>
+  </div>
   <div class="row">
     <% @projects.each do |project| %>
       <div class="col-md-4">            

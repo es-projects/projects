@@ -13,31 +13,40 @@
             <div class="collapse navbar-collapse show" id="example-navbar-profile" data-nav-image="./assets/img//blurred-image-1.jpg">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#pablo">
-                            <i class="now-ui-icons objects_globe"></i>
-                            <p>Discover</p>
+                        <a class="nav-link" href="/projects">
+                            <i class="fas fa-briefcase"></i>
+                            <p>Projects</p>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#pablo">
-                            <i class="now-ui-icons users_circle-08"></i>
-                            <p>Profile</p>
+                        <a class="nav-link" href="/users">
+                            <i class="fas fa-users"></i>
+                            <p>Users</p>
                         </a>
                     </li>
-  <li class="nav-item dropdown nav-item-image">
-    <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">
-      <div class="">
-        <%= image_tag('/images/avatar.jpg') %>
-        <!--img src="assets/img/avatar.jpg" alt="" class="hoverZoomLink"-->
-      </div>
-    </a>
-    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-      <a class="dropdown-item" href="#">Perfil</a>
-      <a class="dropdown-item" href="#">Definições</a>
-      <div class="divider"></div>
-      <a class="dropdown-item" href="#">Terminar Sessão</a>
-    </div>
-  </li>
+                    <% if user_signed_in? %>
+                    <li class="nav-item dropdown nav-item-image">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                            <div class="">
+                                <%= image_tag('/images/avatar.jpg') %>
+                                <!--img src="assets/img/avatar.jpg" alt="" class="hoverZoomLink"-->
+                            </div>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">Perfil</a>
+                        <a class="dropdown-item" href="#">Definições</a>
+                        <div class="divider"></div>
+                        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+                        </div>
+                    </li>
+                    <% else %>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/users/sign_in">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <p>Sign In</p>
+                        </a>
+                    </li>
+                    <% end %>
                 </ul>
             </div>
         </div>

@@ -1,14 +1,20 @@
 <div class="section">
   <div class="container">
-    <h1>Advisors</h1>
+  <% if notice %>
+    <div class="alert alert-primary" role="alert">
+      <%= notice %>
+    </div>
+  <% end %>
+    <p></p>
+    <h1><%= t(:advisors) %></h1>
 
-    <table>
+    <table class="table">
         <tr>
           <th>Id</th>
           <th>Names</th>
           <th>Email</th>
           <th>Intern</th>
-          <th colspan="3"></th>
+          <th colspan="3"><%= t(:options) %></th>
         </tr>
 
         <% @advisors.each do |advisor| %>
@@ -17,15 +23,15 @@
             <td><%= advisor.name %></td>
             <td><%= advisor.email %></td>
             <td><%= advisor.intern %></td>
-            <td><%= link_to 'Show', advisor_path(advisor) %></td>
-            <td><%= link_to 'Edit', edit_advisor_path(advisor) %></td>
-            <td><%= link_to 'Destroy', advisor_path(advisor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to t(:show), advisor_path(advisor) %></td>
+            <td><%= link_to t(:edit), edit_advisor_path(advisor) %></td>
+            <td><%= link_to t(:destroy), advisor_path(advisor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
     </table>
 
     <br>
 
-    <%= link_to 'New Advisor', new_advisor_path, :class => "btn btn-primary" %>
+    <%= link_to t(:new_advisor), new_advisor_path, :class => "btn btn-primary" %>
   </div>
 </div>

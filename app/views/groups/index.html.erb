@@ -1,7 +1,11 @@
 <div class="section">
   <div class="container">
-    <p id="notice"><%= notice %></p>
-
+  <% if notice %>
+    <div class="alert alert-primary" role="alert">
+      <%= notice %>
+    </div>
+  <% end %>
+    <p></p>
     <h1><%= t(:groups) %></h1>
 
     <table class="table">
@@ -10,7 +14,7 @@
           <th><%= t(:group_id) %></th>
           <th><%= t(:student_1) %></th>
           <th><%= t(:student_2) %></th>
-          <th colspan="3">Options</th>
+          <th colspan="3"><%= t(:options) %></th>
         </tr>
       </thead>
 

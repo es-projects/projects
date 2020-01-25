@@ -30,18 +30,28 @@
                             <p><%= t(:users) %></p>
                         </a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Language
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownLanguage">
+                            <a class="dropdown-item" href="?locale=en">English</a>
+                            <a class="dropdown-item" href="?locale=pt">Portuguese</a>
+                            <a class="dropdown-item" href="?locale=tr">Turkish</a>
+                        </div>
+                        </li>
                     <% if user_signed_in? %>
                     <li class="nav-item dropdown nav-item-image">
-                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownUser" data-toggle="dropdown" aria-expanded="false">
                             <div class="">
                                 <%= image_tag('/images/avatar.jpg', :class => "hoverZoomLink") %> 
                             </div>
                         </a>
-                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                        <a class="dropdown-item" href="#">Perfil</a>
-                        <a class="dropdown-item" href="#">Definições</a>
-                        <div class="divider"></div>
-                        <%= link_to t(:logout), destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
+                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownUser">
+                            <a class="dropdown-item" href="#">Perfil</a>
+                            <a class="dropdown-item" href="#">Definições</a>
+                            <div class="divider"></div>
+                            <%= link_to t(:logout), destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
                         </div>
                     </li>
                     <% else %>

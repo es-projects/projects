@@ -13,7 +13,7 @@
           <th>Average</th>
           <th>Group</th>
           <th>Project</th>
-          <th colspan="3"></th>
+          <th colspan="3"><%= t(:options) %></th>
         </tr>
       </thead>
 
@@ -26,9 +26,9 @@
             <td><%= student.average %></td>
             <td><%= student.group_id %></td>
             <td><%= student.project_id %></td>
-            <td><%= link_to 'Show', student %></td>
-            <td><%= link_to 'Edit', edit_student_path(student) %></td>
-            <td><%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <td><%= link_to t(:show), student %></td>
+            <td><%= link_to t(:edit), edit_student_path(student) %></td>
+            <td><%= link_to t(:destroy), student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
           </tr>
         <% end %>
       </tbody>

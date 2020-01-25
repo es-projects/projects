@@ -62,9 +62,11 @@ en:
   show: Show
   edit: Edit
   destroy: Destroy
+  options: Options
 
   # users
   edit_user: Editing User
+  new_user: New User
   
   # home
   users: Users
@@ -75,4 +77,9 @@ en:
 
   # advisors
   advisors: Advisors
-  
+  new_advisor: New Advisor
+
+  #students
+  students: Students
+  new_student: New Student
+

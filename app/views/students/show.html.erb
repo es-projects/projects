@@ -1,34 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="section">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Number:</strong>
-  <%= @student.number %>
-</p>
+    <p>
+      <strong>Number:</strong>
+      <%= @student.number %>
+    </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @student.name %>
-</p>
+    <p>
+      <strong>Name:</strong>
+      <%= @student.name %>
+    </p>
 
-<p>
-  <strong>Ects:</strong>
-  <%= @student.ects %>
-</p>
+    <p>
+      <strong>Ects:</strong>
+      <%= @student.ects %>
+    </p>
 
-<p>
-  <strong>Average:</strong>
-  <%= @student.average %>
-</p>
+    <p>
+      <strong>Average:</strong>
+      <%= @student.average %>
+    </p>
 
-<p>
-  <strong>Group:</strong>
-  <%= @student.group_id %>
-</p>
+    <p>
+      <strong>Group:</strong>
+      <%= @student.group_id %>
+    </p>
 
-<p>
-  <strong>Project:</strong>
-  <%= @student.project_id %>
-</p>
+    <p>
+      <strong>Project:</strong>
+      <%= @student.project_id %>
+    </p>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+    <%= link_to 'Edit', edit_student_path(@student) %> |
+    <%= link_to 'Back', students_path %>
+  </div>
+</div>

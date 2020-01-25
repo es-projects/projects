@@ -1,6 +1,11 @@
-<h1><%= t(:edit_group) %></h1>
+<div class="section">
+  <div class="container">
 
-<%= render 'form', group: @group %>
+    <h1><%= t(:edit_group) %></h1>
 
-<%= link_to t(:show), @group %> |
-<%= link_to t(:back), groups_path %>
+    <%= render 'form', group: @group %>
+
+    <%= link_to t(:show), @group %> |
+    <%= link_to t(:back), groups_path %>
+  </div>
+</div>

@@ -30,12 +30,9 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  # projects
   projects: Projects
   new_project: New Project
-  show: Show
-  edit: Edit
-  destroy: Destroy
   project_name: Project name
   proj_desc: Project description
 
@@ -48,6 +45,7 @@ en:
   create_project_application: Create Project Application
   update_project_application: Update Project Application
 
+  # groups
   groups: Groups
   group_id: Group Id
   student_1: Student 1
@@ -57,6 +55,24 @@ en:
   create_group: Create Group
   update_group: Update Group
 
+  # general
   back: Back
   confirmation: Are you sure?
   es: Software Engineering
+  show: Show
+  edit: Edit
+  destroy: Destroy
+
+  # users
+  edit_user: Editing User
+  
+  # home
+  users: Users
+  home: Home
+  title: Final Projects
+  signin: Sign In
+  logout: Log Out
+
+  # advisors
+  advisors: Advisors
+  

@@ -1,44 +1,48 @@
-<h1>New Advisor</h1>
+<div class="section">
+  <div class="container">
+    <h1>New Advisor</h1>
 
-<%= form_with scope: :advisor, url: advisors_path, local: true do |form| %>
+    <%= form_with scope: :advisor, url: advisors_path, local: true do |form| %>
 
-    <% if @advisor.errors.any? %>
-        <div id="error_explanation">
-            <h2>
-                <%= pluralize(@advisor.errors.count, "error") %> prohibited this advisor from being saved:
-            </h2>
-            <ul>
-                <% @advisor.errors.full_messages.each do |msg| %>
-                    <li><%= msg %></li>
-                <% end %>
-            </ul>
-        </div>
+        <% if @advisor.errors.any? %>
+            <div id="error_explanation">
+                <h2>
+                    <%= pluralize(@advisor.errors.count, "error") %> prohibited this advisor from being saved:
+                </h2>
+                <ul>
+                    <% @advisor.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+
+        <p>
+            <%= form.label :name %>
+            <%= form.text_field :name %>
+        </p>
+
+        <p>
+            <%= form.label :email %>
+            <%= form.text_field :email %>
+        </p>
+
+        <p>
+            <%= form.label :intern %>
+            <%= form.check_box :intern %>
+        </p>
+
+        <p>
+        <%= form.label :user_id %><br />
+        <%= form.select :user_id, options_for_select(User.all.map{|s|[s.username, s.id]}) %>
+        <p>
+
+        <p>
+            <%= form.submit %>
+        </p>
+
     <% end %>
 
-    <p>
-        <%= form.label :name %>
-        <%= form.text_field :name %>
-    </p>
-
-    <p>
-        <%= form.label :email %>
-        <%= form.text_field :email %>
-    </p>
-
-    <p>
-        <%= form.label :intern %>
-        <%= form.check_box :intern %>
-    </p>
-
-    <p>
-      <%= form.label :user_id %><br />
-      <%= form.select :user_id, options_for_select(User.all.map{|s|[s.username, s.id]}) %>
-    <p>
-
-    <p>
-        <%= form.submit %>
-    </p>
-
-<% end %>
-
-<%= link_to 'Back', advisors_path %>
+    <%= link_to 'Back', advisors_path %>
+  </div>
+</div>

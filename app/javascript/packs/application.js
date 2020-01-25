@@ -7,6 +7,10 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("jquery")
+require("popper.js")
+require("custom/bootstrap")
+require("custom/now-ui-kit")
 
 import "@fortawesome/fontawesome-free/js/all";
 
@@ -16,3 +20,7 @@ import "@fortawesome/fontawesome-free/js/all";
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+import $ from 'jquery';
+global.$ = $;
+global.jQuery = $;

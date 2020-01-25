@@ -2,7 +2,7 @@
     <nav class="navbar navbar-absolute navbar-expand-lg bg-white">
         <div class="container">
             <div class="navbar-translate">
-                <a class="navbar-brand" href="/">PF</a>
+                <a class="navbar-brand" href="/"><%= t(:title) %></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#example-navbar-profile" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar bar1"></span>
                     <span class="navbar-toggler-bar bar2"></span>
@@ -15,40 +15,40 @@
                     <li class="nav-item <%= 'active' if current_page?('/') %>">
                         <a class="nav-link" href="/">
                             <i class="fas fa-home"></i>
-                            <p>Home</p>
+                            <p><%= t(:home) %></p>
                         </a>
                     </li>
                     <li class="nav-item <%= 'active' if current_page?('/projects') %>">
                         <a class="nav-link" href="/projects">
                             <i class="fas fa-briefcase"></i>
-                            <p>Projects</p>
+                            <p><%= t(:projects) %></p>
                         </a>
                     </li>
                     <li class="nav-item <%= 'active' if current_page?('/users') %>">
                         <a class="nav-link" href="/users">
                             <i class="fas fa-users"></i>
-                            <p>Users</p>
+                            <p><%= t(:users) %></p>
                         </a>
                     </li>
                     <% if user_signed_in? %>
                     <li class="nav-item dropdown nav-item-image">
-                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
                             <div class="">
-                                <%= image_tag('/images/avatar.jpg', :class => "hoverZoomLink") %>
+                                <%= image_tag('/images/avatar.jpg', :class => "hoverZoomLink") %> 
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
                         <a class="dropdown-item" href="#">Perfil</a>
                         <a class="dropdown-item" href="#">Definições</a>
                         <div class="divider"></div>
-                        <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+                        <%= link_to t(:logout), destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
                         </div>
                     </li>
                     <% else %>
                     <li class="nav-item">
                         <a class="nav-link" href="/users/sign_in">
                             <i class="fas fa-sign-in-alt"></i>
-                            <p>Sign In</p>
+                            <p><%= t(:signin) %></p>
                         </a>
                     </li>
                     <% end %>

@@ -1,9 +1,9 @@
 <div class="section">
   <div class="container">
-    <h1>New Student</h1>
+    <h1><%= t(:new_student) %></h1>
 
     <%= render 'form', student: @student %>
 
-    <%= link_to 'Back', students_path %>
+    <%= link_to t(:back), students_path %>
   </div>
 </div>

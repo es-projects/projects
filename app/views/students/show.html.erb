@@ -3,36 +3,36 @@
     <p id="notice"><%= notice %></p>
 
     <p>
-      <strong>Number:</strong>
+      <strong><%= t(:number) %>:</strong>
       <%= @student.number %>
     </p>
 
     <p>
-      <strong>Name:</strong>
+      <strong><%= t(:name) %>:</strong>
       <%= @student.name %>
     </p>
 
     <p>
-      <strong>Ects:</strong>
+      <strong><%= t(:ects) %>:</strong>
       <%= @student.ects %>
     </p>
 
     <p>
-      <strong>Average:</strong>
+      <strong><%= t(:avg) %>:</strong>
       <%= @student.average %>
     </p>
 
     <p>
-      <strong>Group:</strong>
+      <strong><%= t(:group) %>:</strong>
       <%= @student.group_id %>
     </p>
 
     <p>
-      <strong>Project:</strong>
+      <strong><%= t(:project) %>:</strong>
       <%= @student.project_id %>
     </p>
 
-    <%= link_to 'Edit', edit_student_path(@student) %> |
-    <%= link_to 'Back', students_path %>
+    <%= link_to t(:edit), edit_student_path(@student) %> |
+    <%= link_to t(:back), students_path %>
   </div>
 </div>

@@ -71,6 +71,7 @@ en:
   new_user: New User
   users: Users
   username: Username
+  editing_user: Editing User
   
   # home
   home: Home

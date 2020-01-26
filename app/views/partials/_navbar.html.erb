@@ -54,9 +54,10 @@
                     </li>
                     <% else %>
                     <li class="nav-item">
-                        <%= link_to new_session_path(locale: I18n.locale), class: "nav-link" do %>
-                            <i class="fas fa-sign-in-alt"></i> <%= t(:signin) %>
-                        <% end %>
+                        <a class="nav-link" href="/users/sign_in"> 
+                            <i class="fas fa-sign-in-alt"></i>
+                            <p><%= t(:signin) %></p>
+                        </a>
                     </li>
                     <% end %>
                 </ul>

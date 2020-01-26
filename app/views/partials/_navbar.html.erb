@@ -19,16 +19,14 @@
                         </a>
                     </li>
                     <li class="nav-item <%= 'active' if current_page?('/projects') %>">
-                        <a class="nav-link" href="/projects">
-                            <i class="fas fa-briefcase"></i>
-                            <p><%= t(:projects) %></p>
-                        </a>
+                        <%= link_to projects_path(locale: I18n.locale), class: "nav-link" do %>
+                            <i class="fas fa-briefcase"></i> <%= t(:projects) %>
+                        <% end %>
                     </li>
                     <li class="nav-item <%= 'active' if current_page?('/users') %>">
-                        <a class="nav-link" href="/users">
-                            <i class="fas fa-users"></i>
-                            <p><%= t(:users) %></p>
-                        </a>
+                        <%= link_to users_path(locale: I18n.locale), class: "nav-link" do %>
+                            <i class="fas fa-users"></i> <%= t(:users) %>
+                        <% end %>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownLanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -56,10 +54,9 @@
                     </li>
                     <% else %>
                     <li class="nav-item">
-                        <a class="nav-link" href="/users/sign_in">
-                            <i class="fas fa-sign-in-alt"></i>
-                            <p><%= t(:signin) %></p>
-                        </a>
+                        <%= link_to new_session_path(locale: I18n.locale), class: "nav-link" do %>
+                            <i class="fas fa-sign-in-alt"></i> <%= t(:signin) %>
+                        <% end %>
                     </li>
                     <% end %>
                 </ul>

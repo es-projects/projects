@@ -64,13 +64,15 @@ en:
   destroy: Destroy
   options: Options
   id: Id
+  email: Email
 
   # users
   edit_user: Editing User
   new_user: New User
+  users: Users
+  username: Username
   
   # home
-  users: Users
   home: Home
   title: Final Projects
   signin: Sign In
@@ -80,7 +82,6 @@ en:
   advisors: Advisors
   new_advisor: New Advisor
   names: Names
-  email: Email
   inter: Intern
   editing_advisor: Editing Advisor
   new_advisor: New Advisor

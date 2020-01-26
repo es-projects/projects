@@ -36,6 +36,7 @@ en:
   project_name: Project name
   proj_desc: Project description
 
+  # projects applications
   project_applications: Project Applications
   group: Group
   project: Project
@@ -91,4 +92,8 @@ en:
   #students
   students: Students
   new_student: New Student
-
+  number: Number
+  name: Name
+  ects: Ects
+  avg: Average
+  editing_student: Editing Student

@@ -1,10 +1,10 @@
 <div class="section">
   <div class="container">
-    <h1>Editing Project</h1>
+    <h1><%= t(:editing_proj) %></h1>
 
     <%= render 'form', project: @project %>
 
-    <%= link_to 'Show', @project %> |
-    <%= link_to 'Back', projects_path %>
+    <%= link_to t(:show), @project %> |
+    <%= link_to t(:back), projects_path %>
     </div>
 </div>

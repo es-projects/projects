@@ -3,16 +3,16 @@
     <p id="notice"><%= notice %></p>
 
     <p>
-      <strong>Project name:</strong>
+      <strong><%= t(:project_name) %>:</strong>
       <%= @project.project_name %>
     </p>
 
     <p>
-      <strong>Project description:</strong>
+      <strong><%= t(:proj_desc) %>:</strong>
       <%= @project.project_description %>
     </p>
 
-    <%= link_to 'Edit', edit_project_path(@project) %> |
-    <%= link_to 'Back', projects_path %>
+    <%= link_to t(:edit), edit_project_path(@project) %> |
+    <%= link_to t(:back), projects_path %>
     </div>
 </div>

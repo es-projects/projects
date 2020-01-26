@@ -11,42 +11,42 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :number %>
-    <%= form.number_field :number %>
+    <%= form.number_field :number, :class=>"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.text_field :name, :class=>"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :ects %>
-    <%= form.number_field :ects %>
+    <%= form.number_field :ects, :class=>"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :average %>
-    <%= form.text_field :average %>
+    <%= form.text_field :average, :class=>"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :group_id %>
-    <%= form.number_field :group_id %>
+    <%= form.number_field :group_id, :class=>"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :project_id %>
-    <%= form.number_field :project_id %>
+    <%= form.number_field :project_id, :class=>"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label :user_id %><br />
-    <%= form.select :user_id, options_for_select(User.all.map{|s|[s.username, s.id]}) %>
+    <%= form.select :user_id, options_for_select(User.all.map{|s|[s.username, s.id]}), :class=>"form-control" %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
+    <%= form.submit :class => "btn btn-primary" %>
   </div>
 <% end %>

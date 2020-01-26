@@ -11,17 +11,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label t(:student_1) %><br />
-    <%= form.select :student_1_id, options_for_select(User.all.map{|s|[s.username, s.id]}) %>
+    <%= form.select :student_1_id, options_for_select(User.all.map{|s|[s.username, s.id]}), :class=>"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label t(:student_2) %><br />
-    <%= form.select :student_2_id, options_for_select(User.all.map{|s|[s.username, s.id]}) %>
+    <%= form.select :student_2_id, options_for_select(User.all.map{|s|[s.username, s.id]}), :class=>"form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit (form.object.new_record? ? t(:create_group) : t(:update_group)) %>
+  <div class="form-group">
+    <%= form.submit (form.object.new_record? ? t(:create_group) : t(:update_group)) :class => "btn btn-primary" %>
   </div>
 <% end %>

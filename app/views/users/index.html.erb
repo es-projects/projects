@@ -1,9 +1,15 @@
 <div class="section">
   <div class="container">
-    <p id="notice"><%= notice %></p>
+    <% if notice %>
+    <div class="alert alert-primary" role="alert">
+      <%= notice %>
+    </div>
+    <% end %>
+    <p></p>
 
     <h1><%= t(:users) %></h1>
-    <table class="table">
+    <div class="table-responsive">
+    <table class="table table-striped">
       <thead>
         <tr>
           <th><%= t(:username) %></th>
@@ -24,7 +30,7 @@
         <% end %>
       </tbody>
     </table>
-
+    </div>
     <br>
 
     <%= link_to t(:new_user), new_user_path, :class => "btn btn-primary" %>

@@ -1,10 +1,15 @@
 <div class="section">
   <div class="container">
-    <p id="notice"><%= notice %></p>
+    <% if notice %>
+    <div class="alert alert-primary" role="alert">
+      <%= notice %>
+    </div>
+    <% end %>
+    <p></p>
 
     <h1><%= t(:projects) %></h1>
     <div class="table-responsive">
-      <table class="table ">
+      <table class="table table-striped">
         <thead>
           <tr>
             <th><%= t(:project_name) %></th>

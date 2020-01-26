@@ -7,31 +7,31 @@
   <% end %>
     <p></p>
     <h1><%= t(:groups) %></h1>
-
-    <table class="table">
-      <thead>
-        <tr>
-          <th><%= t(:group_id) %></th>
-          <th><%= t(:student_1) %></th>
-          <th><%= t(:student_2) %></th>
-          <th colspan="3"><%= t(:options) %></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @groups.each do |group| %>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
           <tr>
-            <td scope="row"><%= group.id %></td>
-            <td><%= group.student_1.name unless group.student_1.nil? %></td>
-            <td><%= group.student_2.name unless group.student_2.nil? %></td>
-            <td><%= link_to t(:show), group %></td>
-            <td><%= link_to t(:edit), edit_group_path(group) %></td>
-            <td><%= link_to t(:destroy), group, method: :delete, data: { confirm: t(:confirmation) } %></td>
+            <th><%= t(:group_id) %></th>
+            <th><%= t(:student_1) %></th>
+            <th><%= t(:student_2) %></th>
+            <th colspan="3"><%= t(:options) %></th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
 
+        <tbody>
+          <% @groups.each do |group| %>
+            <tr>
+              <td scope="row"><%= group.id %></td>
+              <td><%= group.student_1.name unless group.student_1.nil? %></td>
+              <td><%= group.student_2.name unless group.student_2.nil? %></td>
+              <td><%= link_to t(:show), group %></td>
+              <td><%= link_to t(:edit), edit_group_path(group) %></td>
+              <td><%= link_to t(:destroy), group, method: :delete, data: { confirm: t(:confirmation) } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
     <br>
 
     <%= link_to t(:new_group), new_group_path, :class => "btn btn-primary" %>

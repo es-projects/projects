@@ -69,7 +69,6 @@ en:
   email: Email
 
   # users
-  edit_user: Editing User
   new_user: New User
   users: Users
   username: Username
@@ -85,7 +84,7 @@ en:
   advisors: Advisors
   new_advisor: New Advisor
   names: Names
-  inter: Intern
+  intern: Intern
   editing_advisor: Editing Advisor
   new_advisor: New Advisor
   advisor: Advisor

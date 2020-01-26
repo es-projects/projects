@@ -7,28 +7,30 @@
   <% end %>
     <p></p>
     <h1><%= t(:advisors) %></h1>
-
-    <table class="table">
-        <tr>
-          <th>Id</th>
-          <th>Names</th>
-          <th>Email</th>
-          <th>Intern</th>
-          <th colspan="3"><%= t(:options) %></th>
-        </tr>
-
-        <% @advisors.each do |advisor| %>
+    <div class="table-responsive">
+      <table class="table table-striped">
           <tr>
-            <td><%= advisor.id %></td>
-            <td><%= advisor.name %></td>
-            <td><%= advisor.email %></td>
-            <td><%= advisor.intern %></td>
-            <td><%= link_to t(:show), advisor_path(advisor) %></td>
-            <td><%= link_to t(:edit), edit_advisor_path(advisor) %></td>
-            <td><%= link_to t(:destroy), advisor_path(advisor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <th><%= t(:id) %></th>
+            <th><%= t(:names) %></th>
+            <th><%= t(:email) %></th>
+            <th><%= t(:intern) %></th>
+            <th colspan="3"><%= t(:options) %></th>
           </tr>
-        <% end %>
-    </table>
+
+          <% @advisors.each do |advisor| %>
+            <tr>
+              <td><%= advisor.id %></td>
+              <td><%= advisor.name %></td>
+              <td><%= advisor.email %></td>
+              <td><%= advisor.intern %></td>
+              <td><%= link_to t(:show), advisor_path(advisor) %></td>
+              <td><%= link_to t(:edit), edit_advisor_path(advisor) %></td>
+              <td><%= link_to t(:destroy), advisor_path(advisor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+      </table>
+    </div>
+
 
     <br>
 

@@ -63,6 +63,7 @@ en:
   edit: Edit
   destroy: Destroy
   options: Options
+  id: Id
 
   # users
   edit_user: Editing User
@@ -78,6 +79,12 @@ en:
   # advisors
   advisors: Advisors
   new_advisor: New Advisor
+  names: Names
+  email: Email
+  inter: Intern
+  editing_advisor: Editing Advisor
+  new_advisor: New Advisor
+  advisor: Advisor
 
   #students
   students: Students

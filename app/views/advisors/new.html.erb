@@ -1,6 +1,6 @@
 <div class="section">
   <div class="container">
-    <h1>New Advisor</h1>
+    <h1><%= t(:new_advisor) %></h1>
 
     <%= form_with scope: :advisor, url: advisors_path, local: true do |form| %>
 
@@ -43,6 +43,6 @@
 
     <% end %>
 
-    <%= link_to 'Back', advisors_path %>
+    <%= link_to t(:back), advisors_path %>
   </div>
 </div>

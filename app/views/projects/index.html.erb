@@ -3,28 +3,29 @@
     <p id="notice"><%= notice %></p>
 
     <h1><%= t(:projects) %></h1>
-    <table class="table">
-      <thead>
-        <tr>
-          <th><%= t(:project_name) %></th>
-          <th><%= t(:proj_desc) %></th>
-          <th colspan="3"><%= t(:options) %></th>
-        </tr>
-      </thead>
-
-      <tbody>
-        <% @projects.each do |project| %>
+    <div class="table-responsive">
+      <table class="table ">
+        <thead>
           <tr>
-            <td><%= project.project_name %></td>
-            <td><%= truncate(project.project_description, :length => 80) %></td>
-            <td><%= link_to t(:show), project %></td>
-            <td><%= link_to t(:edit), edit_project_path(project) %></td>
-            <td><%= link_to t(:destroy), project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <th><%= t(:project_name) %></th>
+            <th><%= t(:proj_desc) %></th>
+            <th colspan="3"><%= t(:options) %></th>
           </tr>
-        <% end %>
-      </tbody>
-    </table>
+        </thead>
 
+        <tbody>
+          <% @projects.each do |project| %>
+            <tr>
+              <td><%= project.project_name %></td>
+              <td><%= truncate(project.project_description, :length => 80) %></td>
+              <td><%= link_to t(:show), project %></td>
+              <td><%= link_to t(:edit), edit_project_path(project) %></td>
+              <td><%= link_to t(:destroy), project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
     <br>
 
     <%= link_to t(:new_project), new_project_path, :class => "btn btn-primary" %>

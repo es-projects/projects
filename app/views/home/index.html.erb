@@ -58,10 +58,13 @@
   <div class="row">
     <% @projects.each do |project| %>
       <div class="col-md-4">            
-        <div class="card">
-          <div class="info text-center">
-            <h4 class="info-title"><%= project.project_name %></h4>
-            <p class="description"><%= project.project_description %></p>
+        <div class="card card-blog">
+          <div class="card-body text-center">
+            <h5 class="card-title"><%= project.project_name %></h4>
+            <p class="card-description"><%= project.project_description %></p>
+            <div class="card-footer">
+              <%= link_to "Read Article", project, :class=> "btn btn-primary" %>
+						</div>
           </div>
         </div>
       </div>

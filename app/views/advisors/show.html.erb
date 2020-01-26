@@ -1,28 +1,28 @@
 <div class="section">
   <div class="container">
-    <h1>Advisor</h1>
+    <h1><%= t(:advisor) %></h1>
 
     <p>
-      <strong>Id:</strong>
+      <strong><%= t(:id) %>:</strong>
       <%= @advisor.id %>
     </p>
 
     <p>
-      <strong>Name:</strong>
+      <strong><%= t(:name) %>:</strong>
       <%= @advisor.name %>
     </p>
 
     <p>
-      <strong>Email:</strong>
+      <strong><%= t(:email) %>:</strong>
       <%= @advisor.email %>
     </p>
 
     <p>
-      <strong>Intern:</strong>
+      <strong><%= t(:intern) %>:</strong>
       <%= @advisor.intern %>
     </p>
 
-    <%= link_to 'Edit', edit_advisor_path(@advisor) %> |
-    <%= link_to 'Back', advisors_path %>
+    <%= link_to t(:edit), edit_advisor_path(@advisor) %> |
+    <%= link_to t(:back), advisors_path %>
   </div>
 </div>

@@ -1,6 +1,6 @@
 <div class="section">
   <div class="container">
-    <h1>Editing Advisor</h1>
+    <h1><%= t(:editing_advisor) %></h1>
 
     <%= form_with(model: @advisor, local: true) do |form| %>
 
@@ -38,7 +38,7 @@
 
     <% end %>
 
-    <%= link_to 'Show', @advisor %> |
-    <%= link_to 'Back', advisors_path %>
+    <%= link_to t(:show), @advisor %> |
+    <%= link_to t(:back), advisors_path %>
   </div>
 </div>

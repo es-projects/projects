@@ -35,6 +35,7 @@ en:
   new_project: New Project
   project_name: Project name
   proj_desc: Project description
+  editing_proj: Editing Project
 
   # projects applications
   project_applications: Project Applications

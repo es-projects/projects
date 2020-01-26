@@ -13,10 +13,9 @@
             <div class="collapse navbar-collapse show" id="example-navbar-profile" data-nav-image="./assets/img/blurred-image-1.jpg">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item <%= 'active' if current_page?('/') %>">
-                        <a class="nav-link" href="/">
-                            <i class="fas fa-home"></i>
-                            <p><%= t(:home) %></p>
-                        </a>
+                        <%= link_to root_path(locale: I18n.locale), class: "nav-link" do %>
+                            <i class="fas fa-home"></i> <%= t(:home) %>
+                        <% end %>
                     </li>
                     <li class="nav-item <%= 'active' if current_page?('/projects') %>">
                         <%= link_to projects_path(locale: I18n.locale), class: "nav-link" do %>

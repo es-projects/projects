@@ -3,6 +3,6 @@ class HomeController < ApplicationController
     @groupsCount = Group.count
     @usersCount = User.count
     @projectsCount = Project.count
-    @projects = Project.limit(3)
+    @projects = Project.limit(3).order("RANDOM()")
   end
 end

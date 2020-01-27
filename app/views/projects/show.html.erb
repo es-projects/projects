@@ -1,7 +1,7 @@
 <div class="section">
   <div class="container">
     <p id="notice"><%= notice %></p>
-
+    <h3><%= t(:project) %></h3>
     <p>
       <strong><%= t(:project_name) %>:</strong>
       <%= @project.project_name %>
@@ -11,6 +11,15 @@
       <strong><%= t(:proj_desc) %>:</strong>
       <%= @project.project_description %>
     </p>
+    <h3><%= t(:project_applications) %></h3>
+    <% @applications.each do |application| %>
+      <p>
+        <strong><%= t(:group) %>:</strong>
+        <%= application.group_id %><br>
+        <strong><%= t(:accepted) %>:</strong>
+        <%= application.accepted %>
+      </p>
+    <% end %>
 
     <%= link_to t(:edit), edit_project_path(@project) %> |
     <%= link_to t(:back), projects_path %>

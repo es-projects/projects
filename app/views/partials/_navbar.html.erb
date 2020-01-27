@@ -32,9 +32,9 @@
                             Language
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownLanguage">
-                            <a class="dropdown-item" href="?locale=en">English</a>
-                            <a class="dropdown-item" href="?locale=pt">Portuguese</a>
-                            <a class="dropdown-item" href="?locale=tr">Turkish</a>
+                            <a class="dropdown-item" href="?locale=en"><%= t(:en) %></a>
+                            <a class="dropdown-item" href="?locale=pt"><%= t(:pt) %></a>
+                            <a class="dropdown-item" href="?locale=tr"><%= t(:tr) %></a>
                         </div>
                         </li>
                     <% if user_signed_in? %>
@@ -45,8 +45,8 @@
                             </div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownUser">
-                            <a class="dropdown-item" href="#">Perfil</a>
-                            <a class="dropdown-item" href="#">Definições</a>
+                            <a class="dropdown-item" href="#"><%= t(:profile) %></a>
+                            <a class="dropdown-item" href="#"><%= t(:def) %></a>
                             <div class="divider"></div>
                             <%= link_to t(:logout), destroy_user_session_path, method: :delete, :class => "dropdown-item" %>
                         </div>

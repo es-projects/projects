@@ -68,7 +68,12 @@ tr:
   id: Id
   email: Email
   theme: Theme by
-
+  pt: Portuguese
+  en: English
+  tr: Turkish
+  profile: Profile
+  def: Settings
+  
   # users
   new_user: New User
   users: Users

@@ -68,6 +68,11 @@ pt:
   id: Id
   email: E-mail
   theme: Tema por
+  pt: Português
+  en: Inglês
+  tr: Turco
+  profile: Perfil
+  def: Definições
 
   # users
   new_user: Novo Utilizador

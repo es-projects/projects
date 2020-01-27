@@ -7,10 +7,13 @@ require 'faker'
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.create({ username: "admin", email: "admin@sapo.pt", admin: true, password: "password", password_confirmation: "password" })
+
 30.times do
     User.create(
         username: Faker::Internet.user_name,
         email: Faker::Internet.email,
+        admin: Faker::Boolean.boolean(true_ratio: 0.2),
         password:  "password",
         password_confirmation: "password"
     )

@@ -30,12 +30,76 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 tr:
-  hello: "Merhaba"
-  es: Yazılım Mühendisliği
+  # projects
   projects: Projeler
   new_project: Yeni Proje
+  project_name: Proje Adı
+  proj_desc: Proje içeriği
+  editing_proj: Editing Project
+
+  # projects applications
+  project_applications: Project Applications
+  group: Group
+  project: Project
+  accepted: Accepted
+  new_project_application: New Project Application
+  edit_project_application: Editing Project Application
+  create_project_application: Create Project Application
+  update_project_application: Update Project Application
+
+  # groups
+  groups: Groups
+  group_id: Group Id
+  student_1: Student 1
+  student_2: Student 2
+  new_group: New Group
+  edit_group: Editing Group
+  create_group: Create Group
+  update_group: Update Group
+
+  # general
+  back: Back
+  confirmation: Are you sure?
+  es: Yazılım Mühendisliği
   show: Göster
   edit: Düzenle
   destroy: Sil
-  project_name: Proje Adı
-  proj_desc: Proje içeriği
+  options: Options
+  id: Id
+  email: Email
+  theme: Theme by
+  pt: Portuguese
+  en: English
+  tr: Turkish
+  profile: Profile
+  def: Settings
+  
+  # users
+  new_user: New User
+  users: Users
+  username: Username
+  editing_user: Editing User
+  
+  # home
+  home: Home
+  title: Final Projects
+  signin: Sign In
+  logout: Log Out
+
+  # advisors
+  advisors: Advisors
+  new_advisor: New Advisor
+  names: Names
+  intern: Intern
+  editing_advisor: Editing Advisor
+  new_advisor: New Advisor
+  advisor: Advisor
+
+  #students
+  students: Students
+  new_student: New Student
+  number: Number
+  name: Name
+  ects: Ects
+  avg: Average
+  editing_student: Editing Student

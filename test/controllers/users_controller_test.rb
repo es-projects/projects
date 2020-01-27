@@ -20,7 +20,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
       post users_url, params: { user: { email: 'user_test@test.pt', username: 'user_test', password: 'asd_123', password_confirmation: 'asd_123' } }
     end
     #assert_redirected_to user_url(User.last)
-    assert_redirected_to "\/"
+    assert_redirected_to "\/?locale=en"
   end
 
   test "should show user" do

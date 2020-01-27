@@ -1,34 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="section">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Number:</strong>
-  <%= @student.number %>
-</p>
+    <p>
+      <strong><%= t(:number) %>:</strong>
+      <%= @student.number %>
+    </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @student.name %>
-</p>
+    <p>
+      <strong><%= t(:name) %>:</strong>
+      <%= @student.name %>
+    </p>
 
-<p>
-  <strong>Ects:</strong>
-  <%= @student.ects %>
-</p>
+    <p>
+      <strong><%= t(:ects) %>:</strong>
+      <%= @student.ects %>
+    </p>
 
-<p>
-  <strong>Average:</strong>
-  <%= @student.average %>
-</p>
+    <p>
+      <strong><%= t(:avg) %>:</strong>
+      <%= @student.average %>
+    </p>
 
-<p>
-  <strong>Group:</strong>
-  <%= @student.group_id %>
-</p>
+    <p>
+      <strong><%= t(:group) %>:</strong>
+      <%= @student.group_id %>
+    </p>
 
-<p>
-  <strong>Project:</strong>
-  <%= @student.project_id %>
-</p>
+    <p>
+      <strong><%= t(:project) %>:</strong>
+      <%= @student.project_id %>
+    </p>
 
-<%= link_to 'Edit', edit_student_path(@student) %> |
-<%= link_to 'Back', students_path %>
+    <%= link_to t(:edit), edit_student_path(@student) %> |
+    <%= link_to t(:back), students_path %>
+  </div>
+</div>

@@ -1,19 +1,23 @@
-<p id="notice"><%= notice %></p>
+<div class="section">
+  <div class="container">
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t(:group) %>:</strong>
-  <%= @project_application.group_id %>
-</p>
+    <p>
+      <strong><%= t(:group) %>:</strong>
+      <%= @project_application.group_id %>
+    </p>
 
-<p>
-  <strong><%= t(:project) %>:</strong>
-  <%= @project_application.project_id %>
-</p>
+    <p>
+      <strong><%= t(:project) %>:</strong>
+      <%= @project_application.project_id %>
+    </p>
 
-<p>
-  <strong><%= t(:accepted) %>:</strong>
-  <%= @project_application.accepted %>
-</p>
+    <p>
+      <strong><%= t(:accepted) %>:</strong>
+      <%= @project_application.accepted %>
+    </p>
 
-<%= link_to t(:edit), edit_project_application_path(@project_application) %> |
-<%= link_to t(:back), project_applications_path %>
+    <%= link_to t(:edit), edit_project_application_path(@project_application) %> |
+    <%= link_to t(:back), project_applications_path %>
+    </div>
+</div>

@@ -1,40 +1,44 @@
-<h1>Editing Advisor</h1>
+<div class="section">
+  <div class="container">
+    <h1><%= t(:editing_advisor) %></h1>
 
-<%= form_with(model: @advisor, local: true) do |form| %>
+    <%= form_with(model: @advisor, local: true) do |form| %>
 
-    <% if @advisor.errors.any? %>
-        <div id="error_explanation">
-            <h2>
-                <%= pluralize(@advisor.errors.count, "error") %> prohibited this advisor from being saved:
-            </h2>
-            <ul>
-                <% @advisor.errors.full_messages.each do |msg| %>
-                    <li><%= msg %></li>
-                <% end %>
-            </ul>
+        <% if @advisor.errors.any? %>
+            <div id="error_explanation">
+                <h2>
+                    <%= pluralize(@advisor.errors.count, "error") %> prohibited this advisor from being saved:
+                </h2>
+                <ul>
+                    <% @advisor.errors.full_messages.each do |msg| %>
+                        <li><%= msg %></li>
+                    <% end %>
+                </ul>
+            </div>
+        <% end %>
+
+        <div class="form-group">
+            <%= form.label :name %>
+            <%= form.text_field :name, :class=>"form-control" %>
         </div>
+
+        <div class="form-group">
+            <%= form.label :email %>
+            <%= form.text_field :email, :class=>"form-control" %>
+        </div>
+
+        <div class="form-group">
+            <%= form.label :intern %>
+            <%= form.check_box :intern, :class=>"form-control" %>
+        </div>
+
+        <div class="form-group">
+            <%= form.submit :class => "btn btn-primary" %>
+        </div>
+
     <% end %>
 
-    <p>
-        <%= form.label :name %>
-        <%= form.text_field :name %>
-    </p>
-
-    <p>
-        <%= form.label :email %>
-        <%= form.text_field :email %>
-    </p>
-
-    <p>
-        <%= form.label :intern %>
-        <%= form.check_box :intern %>
-    </p>
-
-    <p>
-        <%= form.submit %>
-    </p>
-
-<% end %>
-
-<%= link_to 'Show', @advisor %> |
-<%= link_to 'Back', advisors_path %>
+    <%= link_to t(:show), @advisor %> |
+    <%= link_to t(:back), advisors_path %>
+  </div>
+</div>

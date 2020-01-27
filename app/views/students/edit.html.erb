@@ -1,6 +1,10 @@
-<h1>Editing Student</h1>
+<div class="section">
+  <div class="container">
+    <h1><%= t(:editing_student) %></h1>
 
-<%= render 'form', student: @student %>
+    <%= render 'form', student: @student %>
 
-<%= link_to 'Show', @student %> |
-<%= link_to 'Back', students_path %>
+    <%= link_to t(:show), @student %> |
+    <%= link_to t(:back), students_path %>
+  </div>
+</div>

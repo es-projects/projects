@@ -1,31 +1,42 @@
-<p id="notice"><%= notice %></p>
-
-<h1><%= t(:project_applications) %></h1>
-
-<table>
-  <thead>
-    <tr>
-      <th><%= t(:group) %></th>
-      <th><%= t(:project) %></th>
-      <th><%= t(:accepted) %></th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @project_applications.each do |project_application| %>
-      <tr>
-        <td><%= project_application.group_id %></td>
-        <td><%= project_application.project_id %></td>
-        <td><%= project_application.accepted %></td>
-        <td><%= link_to t(:show), project_application %></td>
-        <td><%= link_to t(:edit), edit_project_application_path(project_application) %></td>
-        <td><%= link_to t(:destroy), project_application, method: :delete, data: { confirm: t(:confirmation) } %></td>
-      </tr>
+<div class="section">
+  <div class="container">
+    <% if notice %>
+    <div class="alert alert-primary" role="alert">
+      <%= notice %>
+    </div>
     <% end %>
-  </tbody>
-</table>
+    <p></p>
 
-<br>
+    <h1><%= t(:project_applications) %></h1>
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th><%= t(:group) %></th>
+            <th><%= t(:project) %></th>
+            <th><%= t(:accepted) %></th>
+            <th colspan="3"><%= t(:options) %></th>
+          </tr>
+        </thead>
 
-<%= link_to t(:new_project_application), new_project_application_path %>
+        <tbody>
+          <% @project_applications.each do |project_application| %>
+            <tr>
+              <td><%= project_application.group_id %></td>
+              <td><%= project_application.project_id %></td>
+              <td><%= project_application.accepted %></td>
+              <td><%= link_to t(:show), project_application %></td>
+              <% if user_signed_in? && current_user.admin %>
+                <td><%= link_to t(:edit), edit_project_application_path(project_application) %></td>
+                <td><%= link_to t(:destroy), project_application, method: :delete, data: { confirm: t(:confirmation) } %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <br>
+
+    <%= link_to t(:new_project_application), new_project_application_path, :class => "btn btn-primary" %>
+    </div>
+</div>

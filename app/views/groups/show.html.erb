@@ -1,19 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div class="section">
+  <div class="container">
 
-<p>
-  <strong>Id:</strong>
-  <%= @group.id %>
-</p>
+    <p id="notice"><%= notice %></p>
 
-<p>
-  <strong><%= t(:student_1) %>:</strong>
-  <%= @group.student_1.name %>
-</p>
+    <p>
+      <strong><%= t(:id) %>:</strong>
+      <%= @group.id %>
+    </p>
 
-<p>
-  <strong><%= t(:student_2) %>:</strong>
-  <%= @group.student_2.name %>
-</p>
+    <p>
+      <strong><%= t(:student_1) %>:</strong>
+      <%= @group.student_1.name %>
+    </p>
 
-<%= link_to t(:edit), edit_group_path(@group) %> |
-<%= link_to t(:back), groups_path %>
+    <p>
+      <strong><%= t(:student_2) %>:</strong>
+      <%= @group.student_2.name %>
+    </p>
+
+    <%= link_to t(:edit), edit_group_path(@group) %> |
+    <%= link_to t(:back), groups_path %>
+  </div>
+</div>

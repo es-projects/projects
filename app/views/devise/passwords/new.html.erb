@@ -1,16 +1,49 @@
-<h2>Forgot your password?</h2>
-
-<%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
+<div class="page-header header-filter" filter-color="orange">
+  <div class="page-header-image" style="background-image:url(/images/ipt.jpg)"></div>
+    <div class="content">
+      <div class="container">
+        <div class="col-md-5 ml-auto mr-auto">
+          <div class="card card-login card-plain">
+            <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
+            <% if notice %>
+              <div class="alert alert-primary" role="alert">
+                <%= notice %>
+              </div>
+            <% end %>
+            <% if resource.errors.any? %>
+              <div class="alert alert-primary" role="alert">
+                <%= I18n.t("errors.messages.not_saved",
+                 count: resource.errors.count,
+                 resource: resource.class.model_name.human.downcase)
+                %>
+                <% resource.errors.full_messages.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </div>
+            <% end %>
+              <div class="card-header text-center">
+                <div class="logo-container">
+                  <h2>Forgot your password?</h2>
+                </div>
+              </div>
+              <div class="card-body">
+                <div class="input-group no-border input-lg">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-at"></i></span>
+                  </div>
+                  <%= f.email_field :email, autofocus: true, autocomplete: "email", :class=> "form-control", :placeholder => :email %>
+                </div>
+              </div>
+              <div class="card-footer text-center">
+                <%= f.submit "Send me reset password instructions", :class=> "btn btn-primary btn-round btn-lg btn-block" %>
+              </div>
+            </form>
+            <br />
+            <div class="pull-center">
+              <%= render "devise/shared/links" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 <% end %>
-
-<%= render "devise/shared/links" %>

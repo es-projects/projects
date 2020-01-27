@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Vagrant</title>
+    <title><%= content_for?(:title) ? yield(:title) : "Final Projects" %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,8 @@
   </head>
 
   <body>
+    <%= render partial: 'partials/navbar' %>
     <%= yield %>
+    <%= render partial: 'partials/footer' %>
   </body>
 </html>

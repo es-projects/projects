@@ -11,22 +11,22 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label t(:group) %>
-    <%= form.number_field :group_id %>
+    <%= form.number_field :group_id, :class=>"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label t(:project) %>
-    <%= form.number_field :project_id %>
+    <%= form.number_field :project_id, :class=>"form-control" %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= form.label t(:accepted) %>
-    <%= form.check_box :accepted %>
+    <%= form.check_box :accepted, :class=>"form-control" %>
   </div>
 
-  <div class="actions">
-    <%= form.submit (form.object.new_record? ? t(:create_project_application) : t(:update_project_application)) %>
+  <div class="form-group">
+    <%= form.submit (form.object.new_record? ? t(:create_project_application) : t(:update_project_application)), :class => "btn btn-primary" %>
   </div>
 <% end %>

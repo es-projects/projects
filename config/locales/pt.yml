@@ -30,15 +30,14 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 pt:
-  hello: "Olá mundo"
+  # projects
   projects: Projetos
   new_project: Novo Projeto
-  show: Visualizar
-  edit: Editar
-  destroy: Eliminar
   project_name: Nome do projeto
   proj_desc: Descrição do projeto
+  editing_proj: Editing Project
 
+  # projects applications
   project_applications: Aplicações a projetos
   group: Grupo
   project: Projeto
@@ -48,6 +47,7 @@ pt:
   create_project_application: Criar Aplicação a Projeto
   update_project_application: Atualizar Aplicação a Projeto
 
+  # groups
   groups: Grupos
   group_id: Id do grupo
   student_1: Aluno 1
@@ -57,6 +57,49 @@ pt:
   create_group: Criar Grupo
   update_group: Atualizar Grupo
 
+  # general
   back: Voltar
   confirmation: Tem a certeza?
   es: Engenharia de Software
+  show: Visualizar
+  edit: Editar
+  destroy: Eliminar
+  options: Opções
+  id: Id
+  email: E-mail
+  theme: Tema por
+  pt: Português
+  en: Inglês
+  tr: Turco
+  profile: Perfil
+  def: Definições
+
+  # users
+  new_user: Novo Utilizador
+  users: Utilizadores
+  username: Nome de Utilizador
+  editing_user: Editar Utilizador
+  
+  # home
+  home: Home
+  title: Projetos Finais
+  signin: Iniciar Sessão
+  logout: Terminar Sessão
+
+  # advisors
+  advisors: Orientadores
+  new_advisor: Novo Orientador
+  names: Nomes
+  intern: Intern
+  editing_advisor: Editar Orientador
+  new_advisor: Novo Orientador
+  advisor: Orientador
+
+  #students
+  students: Estudantes
+  new_student: Novo Estudante
+  number: Número
+  name: Nome
+  ects: Ects
+  avg: Média
+  editing_student: Editar Estudante

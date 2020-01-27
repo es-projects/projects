@@ -1,0 +1,29 @@
+<footer class="footer">
+    <div class="container">
+        <nav>
+            <ul>
+                <li>
+                    <a href="https://www.ipt.pt" target="_blank">IPT</a>
+                </li>
+                <li>
+                    <a href="https://doctrino.ipt.pt" target="_blank">Doctrino</a>
+                </li>
+                <li>
+                    <%= link_to t(:advisors), advisors_path(locale: I18n.locale) %>
+                </li>
+                <li>
+                    <%= link_to t(:students), students_path(locale: I18n.locale) %>
+                </li>
+                <li>
+                    <%= link_to t(:groups), groups_path(locale: I18n.locale) %>
+                </li>
+                <li>
+                    <%= link_to t(:project_applications), project_applications_path(locale: I18n.locale) %>
+                </li>
+            </ul>
+        </nav>
+        <div class="copyright" id="copyright">
+            <%= t(:es) %> &copy; <script>document.getElementById('copyright')</script> <%= Time.current.year %> <%= t(:theme) %> <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
+        </div>
+    </div>
+</footer>

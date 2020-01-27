@@ -26,8 +26,10 @@
             <td><%= user.email %></td>
             <td><%= user.admin %></td>
             <td><%= link_to t(:show), user %></td>
-            <td><%= link_to t(:edit), edit_user_path(user) %></td>
-            <td><%= link_to t(:destroy), user, method: :delete, data: { confirm: t(:confirmation) } %></td>
+            <% if user_signed_in? && current_user.admin %>
+              <td><%= link_to t(:edit), edit_user_path(user) %></td>
+              <td><%= link_to t(:destroy), user, method: :delete, data: { confirm: t(:confirmation) } %></td>
+            <% end %>
           </tr>
         <% end %>
       </tbody>

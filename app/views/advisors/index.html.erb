@@ -23,9 +23,11 @@
               <td><%= advisor.name %></td>
               <td><%= advisor.email %></td>
               <td><%= advisor.intern %></td>
-              <td><%= link_to t(:show), advisor_path(advisor) %></td>
-              <td><%= link_to t(:edit), edit_advisor_path(advisor) %></td>
-              <td><%= link_to t(:destroy), advisor_path(advisor), method: :delete, data: { confirm: t(:confirmation) } %></td>
+              <td><%= link_to t(:show), advisor_path(advisor), :class=>"btn btn-info" %></td>
+              <% if user_signed_in? && current_user.admin %>
+                <td><%= link_to t(:edit), edit_advisor_path(advisor), :class=>"btn btn-warning" %></td>
+                <td><%= link_to t(:destroy), advisor_path(advisor), method: :delete, data: { confirm: t(:confirmation) }, :class=>"btn btn-danger" %></td>
+              <% end %>
             </tr>
           <% end %>
       </table>

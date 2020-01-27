@@ -25,8 +25,10 @@
               <td><%= group.student_1.name unless group.student_1.nil? %></td>
               <td><%= group.student_2.name unless group.student_2.nil? %></td>
               <td><%= link_to t(:show), group %></td>
-              <td><%= link_to t(:edit), edit_group_path(group) %></td>
-              <td><%= link_to t(:destroy), group, method: :delete, data: { confirm: t(:confirmation) } %></td>
+              <% if user_signed_in? && current_user.admin %>
+                <td><%= link_to t(:edit), edit_group_path(group) %></td>
+                <td><%= link_to t(:destroy), group, method: :delete, data: { confirm: t(:confirmation) } %></td>
+              <% end %>
             </tr>
           <% end %>
         </tbody>

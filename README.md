@@ -5,8 +5,20 @@
 ![Codacy Grade](https://img.shields.io/codacy/grade/17843b8c5e85419d858ae25ab9a75294)
 [![GitHub issues](https://img.shields.io/github/issues/es-projects/projects)](https://github.com/es-projects/projects/issues/)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/es-projects/projects)](https://github.com/es-projects/projects/pulls/)
-## Getting Started
 
+## Usefull routes
+`/users` - Users list <br>
+`/groups` - Groups list <br>
+`/advisors` - Advisors list <br>
+`/students` - Students list <br>
+`/projects` - Projects list <br>
+`/project_applications` - Projects Applications list
+
+## Default Users
+All the users are generated in the seeds.<br>
+The default admin user is `admin@sapo.pt` with password `password`.
+
+## Getting Started
 ### Starting a new Rails Project
 You don't need to do this step (reference only), the project is already created
 ```bash
@@ -52,7 +64,7 @@ rails db:seed
 ### Tests
 Running tests
 ```bash
-RAILS_ENV=test rails rails test
+RAILS_ENV=test rails test
 ```
 Running system tests
 ```bash

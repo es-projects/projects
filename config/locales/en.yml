@@ -67,6 +67,7 @@ en:
   options: Options
   id: Id
   email: Email
+  theme: Theme by
 
   # users
   new_user: New User

@@ -25,7 +25,7 @@
               <td><%= advisor.intern %></td>
               <td><%= link_to t(:show), advisor_path(advisor) %></td>
               <td><%= link_to t(:edit), edit_advisor_path(advisor) %></td>
-              <td><%= link_to t(:destroy), advisor_path(advisor), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to t(:destroy), advisor_path(advisor), method: :delete, data: { confirm: t(:confirmation) } %></td>
             </tr>
           <% end %>
       </table>

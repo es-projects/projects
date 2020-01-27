@@ -33,7 +33,7 @@
               <td><%= student.project_id %></td>
               <td><%= link_to t(:show), student %></td>
               <td><%= link_to t(:edit), edit_student_path(student) %></td>
-              <td><%= link_to t(:destroy), student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to t(:destroy), student, method: :delete, data: { confirm: t(:confirmation) } %></td>
             </tr>
           <% end %>
         </tbody>

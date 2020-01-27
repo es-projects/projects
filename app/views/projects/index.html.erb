@@ -25,7 +25,7 @@
               <td><%= truncate(project.project_description, :length => 80) %></td>
               <td><%= link_to t(:show), project %></td>
               <td><%= link_to t(:edit), edit_project_path(project) %></td>
-              <td><%= link_to t(:destroy), project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to t(:destroy), project, method: :delete, data: { confirm: t(:confirmation) } %></td>
             </tr>
           <% end %>
         </tbody>
